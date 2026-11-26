@@ -1,0 +1,48 @@
+:root {
+  --navy: #14213d;
+  --cream: #f7f1e3;
+  --gold: #c9a227;
+  --ink-soft: #4a5468;
+  --line: #d9cfb6;
+  --card: #fffdf7;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--cream); color: var(--navy); line-height: 1.5; }
+main { max-width: 36rem; margin: 0 auto; padding: 24px 16px 48px; }
+h1 { font-size: 1.75rem; margin: 0 0 .25rem; overflow-wrap: anywhere; }
+h2 { font-size: 1.1rem; margin: 0 0 .5rem; }
+.lead, .hint { color: var(--ink-soft); }
+.hint { font-size: .875rem; margin: .5rem 0; }
+.opt { color: var(--ink-soft); font-weight: 400; font-size: .875rem; }
+
+label { display: block; margin: 1rem 0 .25rem; font-weight: 600; }
+.check { display: flex; gap: .5rem; align-items: center; font-weight: 600; }
+input, select, textarea {
+  width: 100%; font: inherit; font-size: 1rem; padding: .6rem .7rem;
+  border: 1px solid var(--line); border-radius: 8px; background: var(--card); color: var(--navy);
+}
+input[type=checkbox] { width: 1.2rem; height: 1.2rem; accent-color: var(--navy); }
+.row { display: flex; gap: 12px; flex-wrap: wrap; }
+.row > div { flex: 1 1 9rem; }
+[hidden] { display: none !important; }
+
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+.output { margin-top: 2rem; padding: 16px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; margin-top: .75rem; }
+button, .btn {
+  font: inherit; font-weight: 600; cursor: pointer; text-decoration: none; text-align: center;
+  padding: .65rem 1.1rem; border-radius: 8px; border: 2px solid var(--navy);
+  background: var(--navy); color: var(--cream); display: inline-block;
+}
+.btn.ghost { background: transparent; color: var(--navy); }
+button:hover:not(:disabled), .btn:hover { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+button:disabled, .btn[aria-disabled=true] { opacity: .45; cursor: not-allowed; pointer-events: none; }
+
+.when { font-size: 1.15rem; font-weight: 600; margin: .25rem 0; }
+.desc { white-space: pre-wrap; overflow-wrap: anywhere; }
+#s-where, #s-title { overflow-wrap: anywhere; }
+a { color: var(--navy); }
+#s-buttons .btn, #s-buttons button { flex: 1 1 8rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
