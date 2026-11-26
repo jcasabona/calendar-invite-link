@@ -4,4 +4,4 @@ pages_build_output_dir = "."
 
 [[kv_namespaces]]
 binding = "SHORTLINKS"
-id = "REPLACE_WITH_KV_NAMESPACE_ID" # npx wrangler kv namespace create SHORTLINKS
+id = "44f670272a0b47f388162d41a6cb8102" # npx wrangler kv namespace create SHORTLINKS
